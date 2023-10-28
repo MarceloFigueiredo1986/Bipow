@@ -1,0 +1,20 @@
+﻿<h3 class="navitem @ActiveClass" @onclick="OnClicked">@Menu</h3>
+
+@code {
+    [Parameter]
+    public string Menu { get; set; } = string.Empty;
+
+    [Parameter]
+    public EventCallback<string> ActiveChanged { get; set; }
+
+    [Parameter]
+    public string Active { get; set; } = string.Empty;
+
+    string ActiveClass => Active == Menu ? "active" : string.Empty;
+
+    async Task OnClicked()
+    {
+        Active = Menu;
+        await ActiveChanged.InvokeAsync(Active);
+    }
+}
