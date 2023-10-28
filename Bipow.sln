@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.33414.496
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bipow.Components", "Bipow.Components\Bipow.Components.csproj", "{6F59D1ED-F0DB-40BC-943F-3CF3E1F7DA49}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bipow.UI", "Bipow.UI\Bipow.UI\Bipow.UI.csproj", "{CC116491-60C3-407C-95C3-9CCA5366767E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6F59D1ED-F0DB-40BC-943F-3CF3E1F7DA49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6F59D1ED-F0DB-40BC-943F-3CF3E1F7DA49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6F59D1ED-F0DB-40BC-943F-3CF3E1F7DA49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6F59D1ED-F0DB-40BC-943F-3CF3E1F7DA49}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC116491-60C3-407C-95C3-9CCA5366767E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC116491-60C3-407C-95C3-9CCA5366767E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC116491-60C3-407C-95C3-9CCA5366767E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC116491-60C3-407C-95C3-9CCA5366767E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C7A2447D-A96F-417C-9FDF-72FFD3912D7D}
+	EndGlobalSection
+EndGlobal
