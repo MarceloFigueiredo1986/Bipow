@@ -1,9 +1,4 @@
-﻿.navtopbar {
-    padding: 1em;
-    margin: 1em 0;
-}
-
-.infinityHorizontalBar {
+﻿.infinityHorizontalBar {
     margin: 4px, 4px;
     padding: 4px;
     width: 100%;
@@ -11,11 +6,6 @@
     overflow-y: hidden;
     white-space: nowrap;
     height: 60px;
-}
-
-img{
-    width:80px;
-    height:80px;
 }
 
 ::-webkit-scrollbar {

@@ -1,20 +1,25 @@
-﻿<h3 class="navitem @ActiveClass" @onclick="OnClicked">@Menu</h3>
+﻿<h3 style="font-size:@_fontSizeStyle;" class="navitem @ActiveClass" @onclick="@OnClicked">@Menu.Value</h3>
 
 @code {
     [Parameter]
-    public string Menu { get; set; } = string.Empty;
+    public KeyValuePair<int,string> Menu { get; set; }
 
     [Parameter]
-    public EventCallback<string> ActiveChanged { get; set; }
+    public EventCallback<int?> ActiveChanged { get; set; }
 
     [Parameter]
-    public string Active { get; set; } = string.Empty;
+    public int? Active { get; set; }
 
-    string ActiveClass => Active == Menu ? "active" : string.Empty;
+    string ActiveClass => Active == Menu.Key ? "active" : string.Empty;
+
+    [Parameter]
+    public int? FontSize { get; set; } = 16;
+
+    string _fontSizeStyle => $"{FontSize}pt";
 
     async Task OnClicked()
     {
-        Active = Menu;
+        Active = Menu.Key;
         await ActiveChanged.InvokeAsync(Active);
     }
 }

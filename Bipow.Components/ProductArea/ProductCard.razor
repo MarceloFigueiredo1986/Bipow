@@ -1,0 +1,26 @@
+﻿<div class="row card">
+    <img src="@produto.UrlImagem64" alt="Avatar">
+    <button type="button" class="btn btn-outline-success" style="width:105px;margin-left:10px;margin-top:5px;height:30px;padding:2px">Adicionar</button>
+    <div class="container">
+        <p style="max-width:240px;height:35px;"><b>@produto.Nome</b></p>
+        <p style="font-size:10pt;max-width:222px;height:50px">@produto.Descricao</p>
+        <p style="font-size:10pt;margin-top:-5px">
+        @foreach(var rec in produto.Tamanhos)
+        {
+            <a style="margin-right:15px;color:gray"><b>@rec</b></a>
+        }
+        </p>
+        <div style="width:205px">
+            <p style="float:left;font-size:10pt">
+                <b style="color:orange">@produto.Preco €</b>
+                <b style="font-size:8pt;margin-left:105px"><span class="iconify" data-icon="oi:star"></span><iconify-icon icon="oi:heart"></iconify-icon> @produto.Pontuacao/5</b>
+            </p>
+        </div>
+    </div>
+
+</div>
+
+@code {
+    [Parameter]
+    public IProductCardInterface produto { get; set; } = null!;
+}

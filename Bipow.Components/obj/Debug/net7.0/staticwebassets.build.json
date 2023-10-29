@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "VZH8F415Rimam9QD23a5FUEmpOzL30vaB+p6h47tCcw=",
+  "Hash": "rcTmKKcqdPNEJImFWD5ukfBD5cOL5OXGUJJ8mTbouQ0=",
   "Source": "Bipow.Components",
   "BasePath": "_content/Bipow.Components",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "Bipow.Components\\wwwroot",
       "Source": "Bipow.Components",
-      "ContentRoot": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\wwwroot\\",
       "BasePath": "_content/Bipow.Components",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Bipow.Components.styles.css",
+      "Identity": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Bipow.Components.styles.css",
       "SourceId": "Bipow.Components",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "ContentRoot": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
       "BasePath": "_content/Bipow.Components",
       "RelativePath": "Bipow.Components.styles.css",
       "AssetKind": "All",
@@ -31,13 +31,13 @@
       "AssetTraitValue": "ApplicationBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Bipow.Components.styles.css"
+      "OriginalItemSpec": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Bipow.Components.styles.css"
     },
     {
-      "Identity": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Bipow.Components.bundle.scp.css",
+      "Identity": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Bipow.Components.bundle.scp.css",
       "SourceId": "Bipow.Components",
       "SourceType": "Computed",
-      "ContentRoot": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "ContentRoot": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
       "BasePath": "_content/Bipow.Components",
       "RelativePath": "Bipow.Components.bundle.scp.css",
       "AssetKind": "All",
@@ -48,13 +48,13 @@
       "AssetTraitValue": "ProjectBundle",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Bipow.Components.bundle.scp.css"
+      "OriginalItemSpec": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Bipow.Components.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\wwwroot\\exampleJsInterop.js",
+      "Identity": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\wwwroot\\exampleJsInterop.js",
       "SourceId": "Bipow.Components",
       "SourceType": "Discovered",
-      "ContentRoot": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\wwwroot\\",
+      "ContentRoot": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\wwwroot\\",
       "BasePath": "_content/Bipow.Components",
       "RelativePath": "exampleJsInterop.js",
       "AssetKind": "All",

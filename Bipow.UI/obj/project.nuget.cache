@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BR1rKZLc2BJaClG1W0q9KGXpN0eTlJrdRUApAh15HvX2eYnII0GMBFxH+NgMPiLpucNb7/pmM2YtNuNZ9NzCVA==",
+  "dgSpecHash": "RI3+YazUyYtHVQq37OpA0CIa7+y77eI8pZJgbMXbvlvRA6AsJSVrpyXsc2cSMrMQacp/InUUhea2EgSTSvoPJQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.UI\\Bipow.UI.csproj",
+  "projectFilePath": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.UI\\Bipow.UI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Marcelo\\.nuget\\packages\\microsoft.aspnetcore.authorization\\7.0.3\\microsoft.aspnetcore.authorization.7.0.3.nupkg.sha512",
     "C:\\Users\\Marcelo\\.nuget\\packages\\microsoft.aspnetcore.components\\7.0.3\\microsoft.aspnetcore.components.7.0.3.nupkg.sha512",

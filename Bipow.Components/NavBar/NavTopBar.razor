@@ -1,25 +1,48 @@
-﻿<div class="navtopbar">
-    <img src="Bipow.png" />
-    <div class="infinityHorizontalBar">
-        <div style="width:650px;">
-            @foreach (var menu in Menus.Value)
+﻿<div class="infinityHorizontalBar">
+    <div style="width:@width">
+        @{
+            if(Menus is not null)
             {
-                <NavItem Menu="@menu" @bind-Active="_choosedMenu" />
+                foreach (var menu in Menus)
+                {
+                    <NavItem Menu="@menu" @bind-Active="@_activeMenu" FontSize="FontSize" />
+                }
             }
-        </div>
+        }
     </div>
 </div>
 
 @code{
-    public string _choosedMenu { get; set; }
+    [Parameter]
+    public int? ActiveMenu { get; set; }
 
-    Lazy<List<string>> Menus = new Lazy<List<string>>(() =>
-            new List<string>
-            {
-                "Sapatos",
-                "Roupa",
-                "Lembranças",
-                "Bijuteria",
-                "Diversos"
-            });
+    [Parameter]
+    public int? FontSize { get; set; } = 16;
+
+    string width = string.Empty;
+
+    int? _activeMenu
+    {
+        get
+        {
+            return ActiveMenu;
+        }
+        set
+        {
+            ActiveMenu = value;
+            ActiveMenuChanged.InvokeAsync(ActiveMenu);
+        }
+    }
+
+    [Parameter]
+    public EventCallback<int?> ActiveMenuChanged { get; set; }
+
+    [Parameter]
+    public Dictionary<int, string>? Menus { get; set; }
+
+    protected override void OnParametersSet()
+    {
+        if (Menus is not null && string.IsNullOrEmpty(width))
+            width = $"{(Menus.SelectMany(a => a.Value).Count() * 17)}px;";
+    }
 }

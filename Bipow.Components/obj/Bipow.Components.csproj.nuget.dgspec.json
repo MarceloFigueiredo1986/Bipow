@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\Bipow.Components.csproj": {}
+    "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\Bipow.Components.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\Bipow.Components.csproj": {
+    "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\Bipow.Components.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\Bipow.Components.csproj",
+        "projectUniqueName": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\Bipow.Components.csproj",
         "projectName": "Bipow.Components",
-        "projectPath": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\Bipow.Components.csproj",
+        "projectPath": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\Bipow.Components.csproj",
         "packagesPath": "C:\\Users\\Marcelo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\",
+        "outputPath": "C:\\Users\\Marcelo\\Documents\\GitHub\\Bipow\\Bipow.Components\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
@@ -69,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.101\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
