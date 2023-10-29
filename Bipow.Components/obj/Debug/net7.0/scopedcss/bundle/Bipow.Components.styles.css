@@ -1,0 +1,55 @@
+/* _content/Bipow.Components/NavBar/NavItem.razor.rz.scp.css */
+.navitem[b-3o4zlw6f1h] {
+    float: left;
+    margin: 15px 20px 0px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.active[b-3o4zlw6f1h]{
+    color: grey;
+}
+/* _content/Bipow.Components/NavBar/NavTopBar.razor.rz.scp.css */
+.navtopbar[b-qh4bqgv8ax] {
+    padding: 1em;
+    margin: 1em 0;
+}
+
+.infinityHorizontalBar[b-qh4bqgv8ax] {
+    margin: 4px, 4px;
+    padding: 4px;
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 60px;
+}
+
+img[b-qh4bqgv8ax]{
+    width:80px;
+    height:80px;
+}
+
+[b-qh4bqgv8ax]::-webkit-scrollbar {
+    width: 12px; /* Width of the scrollbar track */
+    height:5px;
+}
+
+/* Customize the scrollbar thumb (the draggable part) */
+[b-qh4bqgv8ax]::-webkit-scrollbar-thumb {
+    background: #888; /* Color of the scrollbar thumb */
+    border-radius: 1px; /* Round the corners of the thumb */
+}
+
+/* Customize the scrollbar track on hover */
+[b-qh4bqgv8ax]::-webkit-scrollbar-track {
+    background: #f1f1f1; /* Color of the scrollbar track on hover */
+}
+
+/* Customize the scrollbar thumb on hover */
+[b-qh4bqgv8ax]::-webkit-scrollbar-thumb:hover {
+    background: #555; /* Color of the scrollbar thumb on hover */
+}

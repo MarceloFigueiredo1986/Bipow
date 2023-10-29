@@ -1,0 +1,13 @@
+.navitem[b-3o4zlw6f1h] {
+    float: left;
+    margin: 15px 20px 0px 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -ms-user-select: none; 
+    user-select: none; 
+}
+
+.active[b-3o4zlw6f1h]{
+    color: grey;
+}

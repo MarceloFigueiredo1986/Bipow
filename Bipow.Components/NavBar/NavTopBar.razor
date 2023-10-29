@@ -1,0 +1,25 @@
+﻿<div class="navtopbar">
+    <img src="Bipow.png" />
+    <div class="infinityHorizontalBar">
+        <div style="width:650px;">
+            @foreach (var menu in Menus.Value)
+            {
+                <NavItem Menu="@menu" @bind-Active="_choosedMenu" />
+            }
+        </div>
+    </div>
+</div>
+
+@code{
+    public string _choosedMenu { get; set; }
+
+    Lazy<List<string>> Menus = new Lazy<List<string>>(() =>
+            new List<string>
+            {
+                "Sapatos",
+                "Roupa",
+                "Lembranças",
+                "Bijuteria",
+                "Diversos"
+            });
+}

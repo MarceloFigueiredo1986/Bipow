@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "Hash": "VZH8F415Rimam9QD23a5FUEmpOzL30vaB+p6h47tCcw=",
+  "Source": "Bipow.Components",
+  "BasePath": "_content/Bipow.Components",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "Bipow.Components\\wwwroot",
+      "Source": "Bipow.Components",
+      "ContentRoot": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\wwwroot\\",
+      "BasePath": "_content/Bipow.Components",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Bipow.Components.styles.css",
+      "SourceId": "Bipow.Components",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\",
+      "BasePath": "_content/Bipow.Components",
+      "RelativePath": "Bipow.Components.styles.css",
+      "AssetKind": "All",
+      "AssetMode": "CurrentProject",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ApplicationBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\bundle\\Bipow.Components.styles.css"
+    },
+    {
+      "Identity": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Bipow.Components.bundle.scp.css",
+      "SourceId": "Bipow.Components",
+      "SourceType": "Computed",
+      "ContentRoot": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\",
+      "BasePath": "_content/Bipow.Components",
+      "RelativePath": "Bipow.Components.bundle.scp.css",
+      "AssetKind": "All",
+      "AssetMode": "Reference",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "ScopedCss",
+      "AssetTraitValue": "ProjectBundle",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\obj\\Debug\\net7.0\\scopedcss\\projectbundle\\Bipow.Components.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\wwwroot\\exampleJsInterop.js",
+      "SourceId": "Bipow.Components",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Marcelo\\Desktop\\Bipow\\Bipow.Components\\wwwroot\\",
+      "BasePath": "_content/Bipow.Components",
+      "RelativePath": "exampleJsInterop.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\exampleJsInterop.js"
+    }
+  ]
+}

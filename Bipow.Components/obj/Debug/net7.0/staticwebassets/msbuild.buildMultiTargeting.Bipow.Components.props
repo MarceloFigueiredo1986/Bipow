@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Bipow.Components.props" />
+</Project>
