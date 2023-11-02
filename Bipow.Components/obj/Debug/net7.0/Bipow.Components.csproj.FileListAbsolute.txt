@@ -93,4 +93,5 @@ C:\Users\Marcelo\Documents\GitHub\Bipow\Bipow.Components\obj\Debug\net7.0\Bipow.
 C:\Users\Marcelo\Documents\GitHub\Bipow\Bipow.Components\obj\Debug\net7.0\refint\Bipow.Components.dll
 C:\Users\Marcelo\Documents\GitHub\Bipow\Bipow.Components\obj\Debug\net7.0\Bipow.Components.pdb
 C:\Users\Marcelo\Documents\GitHub\Bipow\Bipow.Components\obj\Debug\net7.0\ref\Bipow.Components.dll
-C:\Users\Marcelo\Documents\GitHub\Bipow\Bipow.Components\obj\Debug\net7.0\scopedcss\ProductArea\ProductCard.razor.rz.scp.css
+C:\Users\Marcelo\Documents\GitHub\Bipow\Bipow.Components\obj\Debug\net7.0\scopedcss\ProductArea\CloathCard.razor.rz.scp.css
+C:\Users\Marcelo\Documents\GitHub\Bipow\Bipow.Components\obj\Debug\net7.0\scopedcss\FloatingButton\FloatingButton.razor.rz.scp.css

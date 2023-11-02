@@ -1,7 +1,7 @@
 ﻿using Bipow.Components.ProductArea;
 namespace Bipow.UI.Models;
 
-public class CardItemProduto : IProductCardInterface
+public class CardItemProduto : ICloathCardInterface
 {
     public string Nome { get; init; } = "Camisola de Caxemira tricotada";
     public string UrlImagem64 { get; init; } = "https://ik.imagekit.io/da113ycvp/Bipow/Produtos/size64/Camisolas/CamisolaSeleccao.jpeg?updatedAt=1698595558051";

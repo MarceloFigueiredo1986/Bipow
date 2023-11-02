@@ -2,7 +2,7 @@
 
 namespace Bipow.Components.ProductArea;
 
-public interface IProductCardInterface
+public interface ICloathCardInterface
 {
     string Nome { get; init; }
     string UrlImagem64 { get; init; }

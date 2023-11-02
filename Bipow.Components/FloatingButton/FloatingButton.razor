@@ -1,0 +1,17 @@
+﻿@if(optionsActivated)
+{
+    <div class="options-menu" @onblur="() => {optionsActivated = !optionsActivated;}">
+        <b>Tamanhos</b>
+        <p>XS S M L ML XL</p>
+        <b>Preço</b>
+        <slider></slider>
+
+    </div>
+}
+<button typeof="button" class="btn btn-secondary floatingbutton">
+    <iconify-icon icon="oi:@icon" @onclick="() => {optionsActivated = !optionsActivated;}" />
+</button>
+@code {
+    bool optionsActivated;
+    string icon => optionsActivated ? "reload" : "wrench";
+}

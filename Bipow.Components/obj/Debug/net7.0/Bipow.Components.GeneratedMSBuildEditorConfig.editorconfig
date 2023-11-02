@@ -20,6 +20,10 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Marcelo/Documents/GitHub/Bipow/Bipow.Components/FloatingButton/FloatingButton.razor]
+build_metadata.AdditionalFiles.TargetPath = RmxvYXRpbmdCdXR0b25cRmxvYXRpbmdCdXR0b24ucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = b-xtv0dy3zan
+
 [C:/Users/Marcelo/Documents/GitHub/Bipow/Bipow.Components/NavBar/NavItem.razor]
 build_metadata.AdditionalFiles.TargetPath = TmF2QmFyXE5hdkl0ZW0ucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = b-3o4zlw6f1h
@@ -28,6 +32,6 @@ build_metadata.AdditionalFiles.CssScope = b-3o4zlw6f1h
 build_metadata.AdditionalFiles.TargetPath = TmF2QmFyXE5hdlRvcEJhci5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = b-qh4bqgv8ax
 
-[C:/Users/Marcelo/Documents/GitHub/Bipow/Bipow.Components/ProductArea/ProductCard.razor]
-build_metadata.AdditionalFiles.TargetPath = UHJvZHVjdEFyZWFcUHJvZHVjdENhcmQucmF6b3I=
-build_metadata.AdditionalFiles.CssScope = b-w6f4u8bzhn
+[C:/Users/Marcelo/Documents/GitHub/Bipow/Bipow.Components/ProductArea/CloathCard.razor]
+build_metadata.AdditionalFiles.TargetPath = UHJvZHVjdEFyZWFcQ2xvYXRoQ2FyZC5yYXpvcg==
+build_metadata.AdditionalFiles.CssScope = b-47klsnbyd2

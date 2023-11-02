@@ -1,0 +1,14 @@
+﻿@page "/cloaths/{Type}"
+
+@using Bipow.UI.Models;
+
+@for (int i = 0; i != 50; i++)
+{
+    <Bipow.Components.ProductArea.CloathCard produto="new CardItemProduto()" />
+}
+
+<Bipow.Components.FloatingButton.FloatingButton />
+@code {
+   [Parameter]
+   public string Type { get; set; }
+}

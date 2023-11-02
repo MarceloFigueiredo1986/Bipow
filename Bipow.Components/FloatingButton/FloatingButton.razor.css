@@ -1,0 +1,22 @@
+.floatingbutton {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    font-size:30px;
+    color:white;
+    border-radius:35px;
+}
+
+.options-menu {
+    padding:10px;
+    border-radius:10px;
+    position: fixed;
+    right: 15px;
+    bottom: 85px;
+    width: 250px;
+    height:450px;
+    background-color: whitesmoke;
+    opacity:0.87;
+}

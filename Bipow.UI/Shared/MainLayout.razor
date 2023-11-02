@@ -4,24 +4,26 @@
 <PageTitle>Bipow</PageTitle>
 
 <div class="page">
-    <main>
+    <header>
         <div class="top-row px-2">
             <div class="navtopbar">
                 <img src="https://ik.imagekit.io/da113ycvp/Bipow/Logo/Bipow.png" />
                 <Bipow.Components.NavBar.NavTopBar Menus="@_menus.Value" @bind-ActiveMenu="_choosenMenu" FontSize="20" />
-                @if(_choosenMenu is not null)
+                @if (_choosenMenu is not null)
                 {
                     <Bipow.Components.NavBar.NavTopBar Menus="@_submenus[_choosenMenu.Value]" @bind-ActiveMenu="_choosenSubMenu" FontSize="16" />
                 }
             </div>
         </div>
+    </header>
+    <main>
         <div class="content px-4">
             @if(_choosenSubMenu is not null)
             {
-                for(int i = 0;i != 50;i++)
-                {
-                    <Bipow.Components.ProductArea.ProductCard produto="new CardItemProduto()" />
-                }
+                <Bipow.UI.Products.Cloath.CloathAreaMenu Type="cloath" />
+            }else
+            {
+                @Body
             }
         </div>
     </main>

@@ -1,3 +1,26 @@
+/* _content/Bipow.Components/FloatingButton/FloatingButton.razor.rz.scp.css */
+.floatingbutton[b-xtv0dy3zan] {
+    width: 60px;
+    height: 60px;
+    position: fixed;
+    right: 15px;
+    bottom: 15px;
+    font-size:30px;
+    color:white;
+    border-radius:35px;
+}
+
+.options-menu[b-xtv0dy3zan] {
+    padding:10px;
+    border-radius:10px;
+    position: fixed;
+    right: 15px;
+    bottom: 85px;
+    width: 250px;
+    height:450px;
+    background-color: whitesmoke;
+    opacity:0.87;
+}
 /* _content/Bipow.Components/NavBar/NavItem.razor.rz.scp.css */
 .navitem[b-3o4zlw6f1h] {
     float: left;
@@ -45,8 +68,8 @@
 [b-qh4bqgv8ax]::-webkit-scrollbar-thumb:hover {
     background: #555; /* Color of the scrollbar thumb on hover */
 }
-/* _content/Bipow.Components/ProductArea/ProductCard.razor.rz.scp.css */
-.card[b-w6f4u8bzhn] {
+/* _content/Bipow.Components/ProductArea/CloathCard.razor.rz.scp.css */
+.card[b-47klsnbyd2] {
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     transition: 0.3s;
     width: 350px;
@@ -56,17 +79,17 @@
     float:left;
 }
 
-    .card:hover[b-w6f4u8bzhn] {
+    .card:hover[b-47klsnbyd2] {
         box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
     }
 
-.container[b-w6f4u8bzhn] {
+.container[b-47klsnbyd2] {
     width:250px;
     float:left;
     padding:5px 5px 5px 0px;
 }
 
-img[b-w6f4u8bzhn] {
+img[b-47klsnbyd2] {
     float:left;
     width: 128px;
     height: 135px;
