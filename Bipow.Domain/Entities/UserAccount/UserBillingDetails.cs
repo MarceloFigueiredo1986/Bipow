@@ -1,11 +1,11 @@
 ﻿namespace Bipow.Domain.Entities.UserAccount;
 
-public class UserBillingDetails
+internal class UserBillingDetails
 {
     public int UserBillingId { get; set; }
-    public int UserId { get; private set; }
-    public int Country { get; private set; }
-    public string Address { get; private set; } = null!;
-    public string ZipCode { get; private set; } = null!;
-    public string VATCode { get; private set; } = null!;
+    public int UserId { get; set; }
+    public int? Country { get; set; }
+    public string? Address { get; set; }
+    public string? ZipCode { get; set; }
+    public string? VATCode { get; set; }
 }

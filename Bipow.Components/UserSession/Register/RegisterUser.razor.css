@@ -1,0 +1,9 @@
+.common {
+    margin: 5px;
+    width: 250px;
+}
+
+.failedField {
+    border-color: salmon;
+    border-width: 2pt;
+}

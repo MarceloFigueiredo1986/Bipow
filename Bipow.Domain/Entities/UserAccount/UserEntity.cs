@@ -2,9 +2,9 @@
 
 namespace Bipow.Domain.Entities.UserAccount;
 
-public class UserEntity
+internal class UserEntity
 {
-    public int UserId { get; init; }
+    public int UserId { get; set; }
 
     [StringLength(45, MinimumLength = 2)]
     public string? Name { get; set; }

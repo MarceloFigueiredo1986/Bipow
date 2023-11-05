@@ -1,0 +1,23 @@
+﻿@inherits RegisterUserComponent;
+
+<EditForm OnSubmit="SaveAsync" Model="@_newRegistry" style="max-width:300px">
+    <input class="form-control common @StyleErrorCheck(_newRegistry.NameError)" type="text" @bind-value="@_newRegistry.Name" placeholder="Nome" />
+    <input class="form-control common @StyleErrorCheck(_newRegistry.UserNameError)" type="text" @bind-value="@_newRegistry.UserName" placeholder="Nome utilizador" />
+    <input class="form-control common @StyleErrorCheck(_newRegistry.PasswordError)" type="password" @bind-value="@_newRegistry.Password" placeholder="Palavra-passe" />
+    <input class="form-control common @StyleErrorCheck(_newRegistry.PasswordConfirmationError)" type="password" @bind-value="@_newRegistry.PasswordConfirmation" placeholder="Confirmação palavra-passe" />
+    <input class="form-control common @StyleErrorCheck(_newRegistry.EmailError)" type="email" @bind-value="@_newRegistry.Email" placeholder="Email" />
+    @switch (_registerStatus)
+    {
+        case RegisterStatus.None:
+            <button type="submit" class="btn btn-outline-secondary common">Criar</button>
+            break;
+        case RegisterStatus.Registering:
+            <button class="btn btn-outline-primary common" disabled>A criar...</button>
+            break;
+    }
+</EditForm>
+
+@code {
+    protected const string failedFieldCSS = "failedField";
+    protected string StyleErrorCheck(string? error) => !string.IsNullOrEmpty(error) ? @failedFieldCSS : string.Empty;
+}

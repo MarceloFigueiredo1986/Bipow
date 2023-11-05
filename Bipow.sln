@@ -7,11 +7,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bipow.Components", "Bipow.C
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bipow.UI", "Bipow.UI\Bipow.UI.csproj", "{AC21C018-3650-4102-AF4B-0C5B4052BC59}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bipow.Core", "Bipow.Core\Bipow.Core.csproj", "{0A1AAF2E-C764-47AB-9BE7-FB25B3918337}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bipow.Core", "Bipow.Core\Bipow.Core.csproj", "{0A1AAF2E-C764-47AB-9BE7-FB25B3918337}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bipow.Infrastructure", "Bipow.Infrastructure\Bipow.Infrastructure.csproj", "{A90C2D24-97E1-4821-A566-F57B5F2BE7B8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bipow.Infrastructure", "Bipow.Infrastructure\Bipow.Infrastructure.csproj", "{A90C2D24-97E1-4821-A566-F57B5F2BE7B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bipow.Domain", "Bipow.Domain\Bipow.Domain.csproj", "{830284F3-E839-4BD8-901F-5AA991B6DF87}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Bipow.Domain", "Bipow.Domain\Bipow.Domain.csproj", "{830284F3-E839-4BD8-901F-5AA991B6DF87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

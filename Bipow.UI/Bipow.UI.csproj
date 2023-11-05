@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Bipow.Components\Bipow.Components.csproj" />
+    <ProjectReference Include="..\Bipow.Infrastructure\Bipow.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

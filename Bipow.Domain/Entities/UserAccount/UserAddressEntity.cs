@@ -1,11 +1,19 @@
 ﻿
+using System.ComponentModel.DataAnnotations;
+
 namespace Bipow.Domain.Entities.UserAccount;
 
-public sealed class UserAddressEntity
+internal sealed class UserAddressEntity
 {
-    public int UserAddressId { get; private set; }
-    public int UserId { get; private set; }
-    public int Country { get; private set; }
-    public string Address { get; private set; } = null!;
-    public string ZipCode { get; private set; } = null!;
+    public int UserAddressId { get; set; }
+    public int UserId { get; set; }
+    public int Country { get; set; }
+
+    [Required]
+    [StringLength(120,MinimumLength = 10,ErrorMessage = "Insira uma morada correta")]
+    public string? Address { get; set; }
+
+    [Required]
+    [RegularExpression(@"^\d{4}(-\d{3})?$", ErrorMessage = "Código Postal inválido")]
+    public string? ZipCode { get; set; }
 }

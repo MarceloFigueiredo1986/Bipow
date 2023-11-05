@@ -1,4 +1,4 @@
-﻿namespace Bipow.Components.UserSession;
+﻿namespace Bipow.Components.UserSession.Model;
 
 public class LoginModel
 {

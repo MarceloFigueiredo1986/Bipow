@@ -1,4 +1,6 @@
-﻿
+﻿@using Bipow.Components.UserSession.Register;
+@inject IModalService modalService;
+
 @switch(_loginStatus)
 {
     case LoginStatus.Blocked :
@@ -9,7 +11,7 @@
             <img src="https://ik.imagekit.io/da113ycvp/Bipow/Login/login_image.jpg?updatedAt=1699049888500" class="imagestyle" />
             <div>
                 <p class="common">
-                    <a class="register">Registar</a>
+                    <a class="register" @onclick="OpenRegisterModal">Registar</a>
                     <a class="register" style="float:right">Recuperar password</a>
                 </p>
                 <input type="text" class="form-control common @_failedUsernameClass" @bind-value="@_credencials.UserName" step="1" id="userName" placeholder="Utilizador" />
@@ -82,5 +84,11 @@
         _failedUsername = false;
         _loginStatus = LoginStatus.LoginIn;
         await FailedLogin().ConfigureAwait(true);
+    }
+
+    private async Task OpenRegisterModal()
+    {
+        await Modal.CloseAsync();
+        modalService.Show<RegisterUser>("Novo registo",new ModalOptions { Size = ModalSize.Small});
     }
 }
