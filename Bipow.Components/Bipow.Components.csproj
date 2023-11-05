@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="UserSession\Register.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
     <None Remove="NavBar\NavItem.razor.css" />
   </ItemGroup>
 
@@ -20,7 +24,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Blazored.Modal" Version="7.1.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="7.0.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="UserSession\Register.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="UserSession\Register.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="UserSession\Register.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Bipow.Core\Bipow.Core.csproj" />
   </ItemGroup>
 
 </Project>

@@ -1,0 +1,33 @@
+.backImg {
+    width: 100px;
+    float: left;
+    height: 200px;
+    background: linear-gradient(to bottom, #f6f8f9 0%,#e5ebee 50%,#d7dee3 51%,#f5f7f9 100%);
+}
+
+.register {
+    font-size: 12pt;
+    cursor: pointer;
+    color:darkslateblue;
+    cursor:pointer;
+}
+
+.register:hover{
+    color:darkorange;
+}
+
+.common {
+    margin: 5px;
+    width: 250px;
+}
+
+.imagestyle {
+    margin-left: 25px;
+    margin-top: -35px;
+    width: 200px;
+}
+
+.failedField{
+    border-color:salmon;
+    border-width:2pt;
+}

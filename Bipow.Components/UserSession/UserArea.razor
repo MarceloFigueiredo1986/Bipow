@@ -1,0 +1,23 @@
+﻿<iconify-icon icon="oi:@_logIcon" @onclick="OnclickEventHandler" style="cursor:pointer"></iconify-icon>
+
+@code {
+    bool _loggedIn;
+    string _logIcon => _loggedIn ? "cog" : "person";
+
+    [CascadingParameter] public IModalService Modal { get; set; } = default!;
+
+    Blazored.Modal.ModalOptions options => new Blazored.Modal.ModalOptions
+        {
+            Size = Blazored.Modal.ModalSize.Automatic,
+            HideCloseButton = true,
+            Position = Blazored.Modal.ModalPosition.Middle
+        };
+
+    void OpenLoginMenu() => Modal.Show<Login>(string.Empty,options);
+
+    private void OnclickEventHandler()
+    {
+        if (!_loggedIn)
+            OpenLoginMenu();
+    }
+}

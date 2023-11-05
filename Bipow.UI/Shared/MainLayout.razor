@@ -8,12 +8,14 @@
         <div class="top-row px-2">
             <div class="navtopbar">
                 <img src="https://ik.imagekit.io/da113ycvp/Bipow/Logo/Bipow.png" />
-                <Bipow.Components.NavBar.NavTopBar Menus="@_menus.Value" @bind-ActiveMenu="_choosenMenu" FontSize="20" />
-                @if (_choosenMenu is not null)
-                {
-                    <Bipow.Components.NavBar.NavTopBar Menus="@_submenus[_choosenMenu.Value]" @bind-ActiveMenu="_choosenSubMenu" FontSize="16" />
-                }
+                <a style="float:right"><Bipow.Components.UserSession.UserArea /></a>
             </div>
+            <Bipow.Components.NavBar.NavTopBar Menus="@_menus.Value" @bind-ActiveMenu="_choosenMenu" FontSize="20" />
+            @if (_choosenMenu is not null)
+            {
+                <Bipow.Components.NavBar.NavTopBar Menus="@_submenus[_choosenMenu.Value]" @bind-ActiveMenu="_choosenSubMenu" FontSize="16" />
+            }
+
         </div>
     </header>
     <main>
