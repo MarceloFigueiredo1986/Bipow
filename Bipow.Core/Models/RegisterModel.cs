@@ -17,20 +17,29 @@ public class RegisterModel
     public int Country { get; set; }
     public string? ZipCode { get; set; }
 
+    public void ClearErrorMessages()
+    {
+        PasswordConfirmationError = null;
+        EmailError = null;
+        PasswordError = null;
+        UserNameError = null; 
+        NameError = null;
+    }
+
     public void ModelValid(IReadOnlyList<ValidationResult> validationErrors)
     {
         foreach(var errorValidation in validationErrors)
         {
-            var property = errorValidation.MemberNames.First();
-            if (property == nameof(Password))
+            var property = errorValidation.MemberNames.First().ToLower();
+            if (property == nameof(Password).ToLower())
                 PasswordError = errorValidation.ErrorMessage;
-            else if (property == nameof(PasswordConfirmation))
+            else if (property == nameof(PasswordConfirmation).ToLower() && !string.IsNullOrEmpty(Password))
                 PasswordConfirmationError = errorValidation.ErrorMessage;
-            else if (property == nameof(Email))
+            else if (property == nameof(Email).ToLower())
                 EmailError = errorValidation.ErrorMessage;
-            else if (property == nameof(UserName))
+            else if (property == nameof(UserName).ToLower())
                 UserNameError = errorValidation.ErrorMessage;
-            else if (property == nameof(Name))
+            else if (property == nameof(Name).ToLower())
                 NameError = errorValidation.ErrorMessage;
         }
     }

@@ -2,14 +2,20 @@
 
 <EditForm OnSubmit="SaveAsync" Model="@_newRegistry" style="max-width:300px">
     <input class="form-control common @StyleErrorCheck(_newRegistry.NameError)" type="text" @bind-value="@_newRegistry.Name" placeholder="Nome" />
+    <h6 class="errorMsg">@_newRegistry.NameError</h6>
     <input class="form-control common @StyleErrorCheck(_newRegistry.UserNameError)" type="text" @bind-value="@_newRegistry.UserName" placeholder="Nome utilizador" />
+    <h6 class="errorMsg">@_newRegistry.UserNameError</h6>
     <input class="form-control common @StyleErrorCheck(_newRegistry.PasswordError)" type="password" @bind-value="@_newRegistry.Password" placeholder="Palavra-passe" />
+    <h6 class="errorMsg">@_newRegistry.PasswordError</h6>
     <input class="form-control common @StyleErrorCheck(_newRegistry.PasswordConfirmationError)" type="password" @bind-value="@_newRegistry.PasswordConfirmation" placeholder="Confirmação palavra-passe" />
+    <h6 class="errorMsg">@_newRegistry.PasswordConfirmationError</h6>
     <input class="form-control common @StyleErrorCheck(_newRegistry.EmailError)" type="email" @bind-value="@_newRegistry.Email" placeholder="Email" />
+    <h6 class="errorMsg">@_newRegistry.EmailError</h6>
     @switch (_registerStatus)
     {
         case RegisterStatus.None:
             <button type="submit" class="btn btn-outline-secondary common">Criar</button>
+            <h6 class="errorMsg">@componentError</h6>
             break;
         case RegisterStatus.Registering:
             <button class="btn btn-outline-primary common" disabled>A criar...</button>

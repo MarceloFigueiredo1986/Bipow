@@ -89,6 +89,6 @@
     private async Task OpenRegisterModal()
     {
         await Modal.CloseAsync();
-        modalService.Show<RegisterUser>("Novo registo",new ModalOptions { Size = ModalSize.Small});
+        modalService.Show<RegisterUser>("Novo registo",new ModalOptions { Size = ModalSize.Small, Position =  ModalPosition.Middle});
     }
 }

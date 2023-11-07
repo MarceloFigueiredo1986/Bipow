@@ -34,20 +34,18 @@ public class UserAggregate
         User.Password = password;
         User.Email = email;
 
+
         var context = new ValidationContext(User, serviceProvider: null, items: null);
         var results = new List<ValidationResult>();
 
-        bool isValid = Validator.TryValidateObject(
+        Validator.TryValidateObject(
             User, context, results,
             validateAllProperties: true);
 
-        if (!isValid)
-            return results;
-
         if (password != passwordConfirmation)
-            return new List<ValidationResult> { new ValidationResult("Palavra-passe e confirmação deve ser iguais", new List<string>(){ nameof(passwordConfirmation) }) };
+            results.Add(new ValidationResult("Palavra-passe e confirmação deve ser iguais", new List<string>(){ nameof(passwordConfirmation) }));
 
-        return null;
+        return results;    
     }
     public IReadOnlyList<ValidationResult>? AddAddress(int country,string? address,string? zipCode)
     {

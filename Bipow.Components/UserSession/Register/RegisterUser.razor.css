@@ -7,3 +7,8 @@
     border-color: salmon;
     border-width: 2pt;
 }
+
+.errorMsg{
+    color:salmon;
+    margin-left:5px;
+}
