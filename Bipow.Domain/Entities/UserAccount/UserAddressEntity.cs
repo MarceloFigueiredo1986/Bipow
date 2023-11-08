@@ -1,11 +1,13 @@
 ﻿
 using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Bipow.Domain.Entities.UserAccount;
 
-internal sealed class UserAddressEntity
+public sealed class UserAddressEntity
 {
     public int UserAddressId { get; set; }
+
     public int UserId { get; set; }
     public int Country { get; set; }
 

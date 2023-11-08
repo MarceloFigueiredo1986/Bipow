@@ -12,10 +12,10 @@ public class UserAggregate
         Addresses = new ();
         BillingAddresses = new ();
     }
-    UserEntity User { get; set; }
-    UserMetadataEntity UserMetadata { get; set; }
-    List<UserAddressEntity> Addresses { get; set; }
-    List<UserBillingDetails> BillingAddresses { get; set; }
+    public UserEntity User { get; private set; }
+    public UserMetadataEntity UserMetadata { get; private set; }
+    public List<UserAddressEntity> Addresses { get; private set; }
+    public List<UserBillingDetailsEntity> BillingAddresses { get; private set; }
 
 
     /// <summary>
@@ -72,7 +72,7 @@ public class UserAggregate
     }
     public void AddBillingAddress(int? country, string? address, string? zipCode, string? vatCode)
     {
-        var newAddress = new UserBillingDetails
+        var newAddress = new UserBillingDetailsEntity
         {
             Country = country,
             Address = address,

@@ -2,7 +2,7 @@
 
 namespace Bipow.Domain.Entities.UserAccount;
 
-internal class UserEntity
+public class UserEntity
 {
     public int UserId { get; set; }
 

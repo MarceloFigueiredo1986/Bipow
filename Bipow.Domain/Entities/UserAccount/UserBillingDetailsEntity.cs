@@ -1,6 +1,6 @@
 ﻿namespace Bipow.Domain.Entities.UserAccount;
 
-internal class UserBillingDetails
+public class UserBillingDetailsEntity
 {
     public int UserBillingId { get; set; }
     public int UserId { get; set; }

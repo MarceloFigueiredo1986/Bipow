@@ -1,6 +1,6 @@
 ﻿namespace Bipow.Domain.Entities.UserAccount;
 
-internal sealed class UserMetadataEntity
+public sealed class UserMetadataEntity
 {
     public int UserMetadataId { get; set; }
     public int UserId { get; set; } 
