@@ -7,7 +7,6 @@ namespace Bipow.Domain.Entities.UserAccount;
 public sealed class UserAddressEntity
 {
     public int UserAddressId { get; set; }
-
     public int UserId { get; set; }
     public int Country { get; set; }
 

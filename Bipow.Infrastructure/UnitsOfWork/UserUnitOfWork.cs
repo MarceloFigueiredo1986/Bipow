@@ -2,6 +2,7 @@
 using Bipow.Core.UnitsOfWork;
 using Bipow.Domain.Aggregates;
 using ErrorOr;
+using Microsoft.EntityFrameworkCore;
 
 namespace Bipow.Infrastructure.UnitsOfWork;
 
@@ -74,5 +75,33 @@ public sealed class UserUnitOfWork : IUserUnitOfWork
     public Task<ErrorOr<Created>> UpdateUserAsync(UserAggregate newUser)
     {
         throw new NotImplementedException();
+    }
+
+    public async Task<ErrorOr<bool>> CheckUserNameInUseAsync(string userName)
+    {
+        try
+        {
+            
+            var userNameInBd = await _dbAcessor.Users.FirstOrDefaultAsync(a => a.UserName.ToLower() == userName.ToLower());
+            return userNameInBd is not null;
+        }
+        catch (Exception ex)
+        {
+            return Error.Failure(description: ex.Message);
+        }
+    }
+
+    public async Task<ErrorOr<bool>> CheckEmailInUseAsync(string email)
+    {
+        try
+        {
+
+            var emailInBd = await _dbAcessor.Users.FirstOrDefaultAsync(a => a.Email.ToLower() == email.ToLower());
+            return emailInBd is not null;
+        }
+        catch (Exception ex)
+        {
+            return Error.Failure(description: ex.Message);
+        }
     }
 }

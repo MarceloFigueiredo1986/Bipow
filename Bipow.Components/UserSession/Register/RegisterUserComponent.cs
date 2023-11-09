@@ -73,8 +73,63 @@ public class RegisterUserComponent : ComponentBase
         }
     }
 
+    protected async Task EmailFieldLeaveEvent()
+    {
+        try
+        {
+            _newRegistry.EmailError = null;
+
+            if (string.IsNullOrEmpty(_newRegistry.Email))
+                return;
+
+            var emailInUse = await _userUnitOfWork.CheckEmailInUseAsync(_newRegistry.Email);
+            if (emailInUse.IsError)
+            {
+                componentError += emailInUse.FirstError.Description;
+                return;
+            }
+            
+            _newRegistry.EmailInUse = emailInUse.Value;
+
+            if (emailInUse.Value)
+                _newRegistry.EmailError = "Email in use";
+        }
+        catch (Exception ex)
+        {
+            componentError += ex.Message;
+        }
+    }
+
+    protected async Task UserNameFieldLeaveEvent()
+    {
+        try
+        {
+            _newRegistry.UserNameError = null;
+
+            if (string.IsNullOrEmpty(_newRegistry.UserName))
+                return;
+
+            var userNameInUse = await _userUnitOfWork.CheckUserNameInUseAsync(_newRegistry.UserName);
+            if (userNameInUse.IsError)
+            {
+                componentError += userNameInUse.FirstError.Description;
+                return;
+            }
+
+            _newRegistry.UserNameInUse = userNameInUse.Value;
+
+            if (userNameInUse.Value)
+                _newRegistry.UserNameError = "Username in use";
+        }
+        catch(Exception ex)
+        {
+            componentError += ex.Message;
+        }
+    }
+
     protected async Task SaveAsync()
     {
+        if (_newRegistry.EmailInUse || _newRegistry.UserNameInUse) return;
         _registerStatus = RegisterStatus.Registering;
         await ValidateAndRegisterAsync().ConfigureAwait(true);
     }

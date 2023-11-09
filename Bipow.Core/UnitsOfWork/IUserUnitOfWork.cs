@@ -18,5 +18,6 @@ public interface IUserUnitOfWork
 
     Task<ErrorOr<Created>> ConfirmUserEmailAsync(UserAggregate newUser);
     Task<ErrorOr<Created>> DeactivateUserAsync(UserAggregate newUser);
-
+    Task<ErrorOr<bool>> CheckEmailInUseAsync(string email);
+    Task<ErrorOr<bool>> CheckUserNameInUseAsync(string userName);
 }

@@ -7,7 +7,6 @@ public class UserAggregate
 {
     public UserAggregate()
     {
-        User = new();
         UserMetadata = new();
         Addresses = new ();
         BillingAddresses = new ();
@@ -29,11 +28,13 @@ public class UserAggregate
     /// <returns>null if no validation erros, otherwise, returns the list of failed validations</returns>
     public IReadOnlyList<ValidationResult>? SetUser(string? userName,string? name, string? password, string? passwordConfirmation, string? email)
     {
-        User.UserName = userName;
-        User.Name = name;
-        User.Password = password;
-        User.Email = email;
-
+        User = new UserEntity
+        {
+            UserName = userName!,
+            Name = name!,
+            Password = password!,
+            Email = email!
+        };
 
         var context = new ValidationContext(User, serviceProvider: null, items: null);
         var results = new List<ValidationResult>();
