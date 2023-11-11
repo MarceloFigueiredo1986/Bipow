@@ -1,9 +1,49 @@
 ﻿.navtopbar {
     padding: 1em;
-    margin: 1em 0;
 }
 
 img {
+    position:absolute;
     width: 80px;
     height: 80px;
+}
+
+.mainNav {
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    height: 115px;
+    max-height:115px;
+    position: absolute;
+    background-color:whitesmoke;
+}
+
+.menuIcon {
+    cursor: pointer;
+    margin-right: 10px;
+    padding-top:28px;
+    font-size: 18pt;
+    color: gray;
+    transition: font-size 1s;
+}
+
+.menuIcon:hover{
+    font-size:32pt;
+}
+
+.userArea {
+    float: right;
+    margin-top:20px;
+}
+
+.searchArea {
+    margin: 25px 30px 0px 0px;
+    float: right;
+    border-style: none;
+    height: 35px;
+    text-align: right;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: absolute;
+    left: 160px;
+    right: 50px;
 }
