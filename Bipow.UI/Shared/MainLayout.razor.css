@@ -16,19 +16,15 @@ img {
     max-height:115px;
     position: absolute;
     background-color:whitesmoke;
+    user-select:none;
 }
 
 .menuIcon {
     cursor: pointer;
     margin-right: 10px;
-    padding-top:28px;
+    padding-top: 28px;
     font-size: 18pt;
     color: gray;
-    transition: font-size 1s;
-}
-
-.menuIcon:hover{
-    font-size:32pt;
 }
 
 .userArea {

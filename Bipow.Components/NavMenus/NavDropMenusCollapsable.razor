@@ -1,0 +1,14 @@
+﻿<div class="collapsablearea @_collapsedClass" @onmouseleave="() => { NotCollapsed = false; NotCollapsedChanged.InvokeAsync();}">
+
+</div>
+
+
+@code {
+    [Parameter]
+    public bool NotCollapsed { get; set; }
+
+    [Parameter]
+    public EventCallback<bool> NotCollapsedChanged { get; set; }
+
+    protected string _collapsedClass => NotCollapsed ? string.Empty : "collapsed";
+}

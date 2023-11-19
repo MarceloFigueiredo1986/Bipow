@@ -1,0 +1,14 @@
+.collapsablearea {
+    height: 300px;
+    width: 250px;
+    background-color: whitesmoke;
+    top: 115px;
+    left: 1px;
+    position: absolute;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.collapsed{
+    visibility:hidden;
+}

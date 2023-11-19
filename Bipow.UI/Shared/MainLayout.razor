@@ -6,56 +6,17 @@
 <div>
     <div class="mainNav">
         <div class="navtopbar">
-            <iconify-icon icon="oi:menu" class="menuIcon" />
+            <iconify-icon icon="oi:@choosedIcon" class="menuIcon" @onclick="() => _dropDownOpen = !_dropDownOpen" />
             <img src="https://ik.imagekit.io/da113ycvp/Bipow/Logo/Bipow.png" />
             <span class="userArea"><Bipow.Components.UserSession.UserArea /></span>
             <input class="searchArea" type="search" placeholder="ex: Casaco Verão" />
         </div>
     </div>
-@*     <header>
-        <div class="top-row px-2">
-            <Bipow.Components.NavBar.NavTopBar Menus="@_menus.Value" @bind-ActiveMenu="_choosenMenu" FontSize="20" />
-            @if (_choosenMenu is not null)
-            {
-                <Bipow.Components.NavBar.NavTopBar Menus="@_submenus[_choosenMenu.Value]" @bind-ActiveMenu="_choosenSubMenu" FontSize="16" />
-            }
-        </div>
-    </header>
-    <main>
-        <div class="content px-4">
-            @if(_choosenSubMenu is not null)
-            {
-                <Bipow.UI.Products.Cloath.CloathAreaMenu Type="cloath" />
-            }else
-            {
-                @Body
-            }
-        </div>
-    </main>
- *@</div>
+    <Bipow.Components.NavMenus.NavDropMenusCollapsable @bind-NotCollapsed="_dropDownOpen" />
+ </div>
 
 @code{
-    int? _choosenMenu;
-    int? _choosenSubMenu;
+    protected bool _dropDownOpen = false;
 
-    Lazy<Dictionary<int, string>> _menus = new Lazy<Dictionary<int, string>>(() =>
-                    new Dictionary<int, string>
-                            {
-                       {1, "Calçado mulher" },
-                       {2, "Calçado homem" },
-                       {3, "Roupa"},
-                       {4, "Lembranças"},
-                       {5, "Bijuteria"},
-                       {6, "Diversos"}
-                    });
-
-    Dictionary<int, Dictionary<int, string>> _submenus = new Dictionary<int, Dictionary<int, string>>()
-    {
-        { 1, new Dictionary<int, string>() { { 1, "Sapatos" }, { 2, "Botas" }, { 3, "Chinelos" } }},
-        { 2, new Dictionary<int, string>() { { 1, "Sapatos" }, { 2, "Botas" }, { 3, "Chinelos" } }},
-        { 3, new Dictionary<int, string>() { { 1, "Camisolas" }, { 2, "Casacos" }, { 3, "Camisas" }, {4, "Calças" }, {5, "Calções" } }},
-        { 4, new Dictionary<int, string>() { { 1, "Garrafinhas" }, { 2, "Gomas" }, { 3, "Dummy 1" }, {4, "Dummy 2" } }},
-        { 5, new Dictionary<int, string>() { { 1, "Pulseiras" }, { 2, "Postais" }, { 3, "Anéis" }, {4, "Colar" } }},
-        { 6, new Dictionary<int, string>() { { 1, "Lorem 1" }, { 2, "Lorem 2" }, { 3, "Lorem 3" }, {4, "Lorem 4" } }},
-    };
+    protected string choosedIcon => !_dropDownOpen ? "menu" : "arrow-bottom";
 }

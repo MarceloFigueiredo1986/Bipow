@@ -17,10 +17,35 @@ namespace Bipow.Infrastructure.Migrations
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "7.0.13")
+                .HasAnnotation("ProductVersion", "7.0.14")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
+
+            modelBuilder.Entity("Bipow.Domain.Entities.Menus.NavMenusEntity", b =>
+                {
+                    b.Property<int>("NavMenuId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("NavMenuId"));
+
+                    b.Property<string>("Href")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Icon")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("NavMenuId")
+                        .HasName("pk_navmenus_navmenuid");
+
+                    b.ToTable("NavMenus");
+                });
 
             modelBuilder.Entity("Bipow.Domain.Entities.UserAccount.UserAddressEntity", b =>
                 {
