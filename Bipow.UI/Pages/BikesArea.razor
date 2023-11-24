@@ -3,5 +3,12 @@
 <h3>BikesArea</h3>
 
 @code {
+    [CascadingParameter]
+    private IBreadcrumbService BreadcrumbService { get; set; }
 
+    protected override void OnAfterRender(bool _)
+    {
+        BreadcrumbService
+            .Set<BikesAreaBreadCrumb>();
+    }
 }

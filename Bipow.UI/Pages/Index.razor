@@ -3,4 +3,12 @@
 <h1>Index</h1>
 
 @code{
+    [CascadingParameter]
+    private IBreadcrumbService BreadcrumbService { get; set; }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        BreadcrumbService
+                .Set<IndexBreadcrumb>();
+    }
 }
