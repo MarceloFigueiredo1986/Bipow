@@ -1,6 +1,6 @@
-﻿using Bipow.Core.Database;
-using Bipow.Core.UnitsOfWork;
+﻿using Bipow.Core.UnitsOfWork;
 using Bipow.Domain.Aggregates;
+using Bipow.Infrastructure.Database;
 using ErrorOr;
 using Microsoft.EntityFrameworkCore;
 

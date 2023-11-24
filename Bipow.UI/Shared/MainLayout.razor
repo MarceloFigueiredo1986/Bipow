@@ -13,7 +13,10 @@
         </div>
     </div>
     <Bipow.Components.NavMenus.NavDropMenusCollapsable @bind-NotCollapsed="_dropDownOpen" />
- </div>
+    <main style="margin-top:115px;padding:10px">
+        @Body
+    </main>
+</div>
 
 @code{
     protected bool _dropDownOpen = false;

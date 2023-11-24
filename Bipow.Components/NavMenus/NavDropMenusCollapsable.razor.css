@@ -1,5 +1,7 @@
 .collapsablearea {
-    height: 300px;
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
     width: 250px;
     background-color: whitesmoke;
     top: 115px;
@@ -7,8 +9,29 @@
     position: absolute;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    overflow-y:scroll;
 }
 
 .collapsed{
     visibility:hidden;
+}
+
+.navlinkstyle {
+    padding: 10px 0px 10px 5px;
+    text-decoration: none;
+    font-size: 13pt;
+    color: gray;
+    border-bottom-style: solid;
+    min-width: 210px;
+    border-width: 1pt;
+    margin: 0px 0px 0px 5px;
+    border-color: lightgray;
+}
+
+    .navlinkstyle:hover {
+        color: black;
+    }
+
+.navlinkstyleactive{
+    color:black;
 }

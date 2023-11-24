@@ -1,4 +1,5 @@
-﻿using Bipow.Core.Repositories;
+﻿using Bipow.Core.DbContext;
+using Bipow.Core.Repositories;
 using Bipow.Core.UnitsOfWork;
 using Bipow.Infrastructure.Database;
 using Bipow.Infrastructure.Repositories;
@@ -13,6 +14,7 @@ public static class InstallServices
     {
         services.AddTransient<IUserUnitOfWork, UserUnitOfWork>();
         services.AddDbContextFactory<DatabaseContext>();
+        services.AddScoped<IdbContext>(opt => opt.GetRequiredService<DatabaseContext>());
         services.AddTransient<IMenusRepository, MenusRepository>();
 
         return services;

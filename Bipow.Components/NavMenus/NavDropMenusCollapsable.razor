@@ -1,5 +1,26 @@
-﻿<div class="collapsablearea @_collapsedClass" @onmouseleave="() => { NotCollapsed = false; NotCollapsedChanged.InvokeAsync();}">
+﻿@using Bipow.Domain.Entities.Menus;
+@inherits NavDropMenusCollapsableComponent;
 
+
+<div class="collapsablearea @_collapsedClass" @onmouseleave="() => { NotCollapsed = false; NotCollapsedChanged.InvokeAsync();}">
+    @if(_menus is not null)
+    {
+        var choosedPage = NavMan.Uri.Replace(NavMan.BaseUri,string.Empty);
+
+        <table>
+        @foreach (NavMenusEntity menu in _menus)
+            {
+                var active = menu.Href == choosedPage ? "navlinkstyleactive" : string.Empty;
+                <tr>
+                <NavLink style="text-decoration:none" Match="NavLinkMatch.All" href="@menu.Href">
+                    <div class="navlinkstyle @active">
+                        <span class="oi oi-@menu.Icon" aria-hidden="true"></span> @menu.Name.ToUpper()
+                    </div>
+                </NavLink>
+            </tr>
+        }
+        </table>
+    }
 </div>
 
 
