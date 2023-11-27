@@ -5,5 +5,5 @@ namespace Bipow.UI;
 public class IndexBreadcrumb : RootBreadcrumb
 {
     public override void Configure(BreadcrumbBuilder builder)
-        => builder.Link("Home", string.Empty);
+        => builder.Link(string.Empty, string.Empty);
 }
