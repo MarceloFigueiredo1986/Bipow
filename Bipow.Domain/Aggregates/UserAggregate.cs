@@ -11,7 +11,7 @@ public class UserAggregate
         Addresses = new ();
         BillingAddresses = new ();
     }
-    public UserEntity User { get; private set; }
+    public UserEntity? User { get; private set; }
     public UserMetadataEntity UserMetadata { get; private set; }
     public List<UserAddressEntity> Addresses { get; private set; }
     public List<UserBillingDetailsEntity> BillingAddresses { get; private set; }

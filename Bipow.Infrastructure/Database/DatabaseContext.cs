@@ -15,6 +15,7 @@ public sealed class DatabaseContext : DbContext , IdbContext
     public DbSet<UserMetadataEntity> UserMetadata { get; set; }
     public DbSet<UserAddressEntity> UserAddresses { get; set; }
     public DbSet<NavMenusEntity> NavMenus { get; set; }
+    public DbSet<UsersByStoreEntity> UsersByStores { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -42,5 +43,15 @@ public sealed class DatabaseContext : DbContext , IdbContext
             Entity<NavMenusEntity>().
             HasKey(b => b.NavMenuId).
             HasName("pk_navmenus_navmenuid");
+
+        modelBuilder.
+            Entity<UsersByStoreEntity>().
+            HasKey(b => new { b.StoreId,b.UserId }).
+            HasName("pk_usersbystore_usersbystoreid");
+
+        modelBuilder.
+    Entity<UsersByStoreEntity>().
+    HasKey(b => new { b.StoreId, b.UserId }).
+    HasName("pk_navmenus_navmenuid");
     }
 }

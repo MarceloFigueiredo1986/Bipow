@@ -104,4 +104,21 @@ public sealed class UserUnitOfWork : IUserUnitOfWork
             return Error.Failure(description: ex.Message);
         }
     }
+
+    public async Task<ErrorOr<bool>> ValidateLoginAsync(string user, string pass)
+    {
+        try
+        {
+            var validLogin = await _dbAcessor.Users.
+                FirstOrDefaultAsync(a => 
+                a.UserName.ToLower() == user.ToLower() &&
+                a.Password.ToLower() == pass.ToLower());
+
+            return validLogin is not null;
+        }
+        catch (Exception ex)
+        {
+            return Error.Failure(description: ex.Message);
+        }
+    }
 }

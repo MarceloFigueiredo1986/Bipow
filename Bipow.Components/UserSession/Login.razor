@@ -1,48 +1,47 @@
-﻿@using Bipow.Components.UserSession.Register;
+﻿
 @inject IModalService modalService;
 
-@switch(_loginStatus)
-{
-    case LoginStatus.Blocked :
-        <h3 style="max-width:250px;font-size:14pt">A sua conta ficou bloqueada por exceder o máximo de tentativas. Contate o email da página para desbloquear a conta.</h3>
-        break;
-    default :
-        <EditForm Model="@_credencials" OnSubmit="ValidateCredencials">
-            <img src="https://ik.imagekit.io/da113ycvp/Bipow/Login/login_image.jpg?updatedAt=1699049888500" class="imagestyle" />
-            <div>
-                <p class="common">
-                    <a class="register" @onclick="OpenRegisterModal">Registar</a>
-                    <a class="register" style="float:right">Recuperar password</a>
-                </p>
-                <input type="text" class="form-control common @_failedUsernameClass" @bind-value="@_credencials.UserName" step="1" id="userName" placeholder="Utilizador" />
-                <input type="password" class="form-control common @_failedPasswordClass" @bind-value="@_credencials.Password" step="2" id="userPassword" placeholder="Password">
-                @switch (_loginStatus)
-                {
-                    case LoginStatus.None:
-                        <button type="submit" class="btn btn-outline-success common">Entrar</button>
-                        break;
-                    case LoginStatus.LoginIn:
-                        <button class="btn btn-outline-primary common" disabled>A validar...</button>
-                        break;
-                }
-            </div>
-        </EditForm>
-    
-    break;
-}
+<ErrorBoundary>
+    <ChildContent>
+        @switch (_loginStatus)
+        {
+            case LoginStatus.Blocked:
+                <h3 style="max-width:250px;font-size:14pt">A sua conta ficou bloqueada por exceder o máximo de tentativas. Contate o email da página para desbloquear a conta.</h3>
+                break;
+            default:
+                <EditForm Model="@_credencials" OnSubmit="ValidateCredencials">
+                    <img src="https://ik.imagekit.io/da113ycvp/Bipow/Login/login_image.jpg?updatedAt=1699049888500" class="imagestyle" />
+                    <div>
+                        <p class="common">
+                            <a class="register" @onclick="OpenRegisterModal">Registar</a>
+                            <a class="register" style="float:right">Recuperar password</a>
+                        </p>
+                        <input type="text" class="form-control common @_failedUsernameClass" @bind-value="@_credencials.UserName" step="1" id="userName" placeholder="Utilizador" />
+                        <input type="password" class="form-control common @_failedPasswordClass" @bind-value="@_credencials.Password" step="2" id="userPassword" placeholder="Password">
+                        @switch (_loginStatus)
+                        {
+                            case LoginStatus.None:
+                                <button type="submit" class="btn btn-outline-success common">Entrar</button>
+                                break;
+                            case LoginStatus.LoginIn:
+                                <button class="btn btn-outline-primary common" disabled>A validar...</button>
+                                break;
+                        }
+                    </div>
+                </EditForm>
+
+                break;
+        }
+    </ChildContent>
+    <ErrorContent>
+        @{
+            DealWithUnexpectedException();
+        }
+        Fucking hell!!;
+    </ErrorContent>
+</ErrorBoundary>
 
 @code{
-    public LoginModel _credencials { get; set; } = new();
-
-    [CascadingParameter]
-    public BlazoredModalInstance Modal { get; set; }
-
-    private enum LoginStatus
-    {
-        None,
-        LoginIn,
-        Blocked
-    }
 
     bool _failedPassword;
     bool _failedUsername;
@@ -54,38 +53,11 @@
     string _failedUsernameClass => _failedUsername ? @failedFieldCSS : string.Empty;
 
     LoginStatus _loginStatus;
+    private ErrorBoundary? errorBoundary;
 
-    async Task SuccessLogin()
-    {
-        await Task.Delay(1000);
-        await Modal.CloseAsync();
-    }
-
-    async Task FailedLogin()
-    {
-        await Task.Delay(1000);
-        if (_loginAttempts == _maximumFailedAttempts)
-            _loginStatus = LoginStatus.Blocked;
-        else
-            _loginStatus = LoginStatus.None;
-
-        _failedUsername = true;
-    }
-
-    async Task LoginProcess()
-    {
-        _loginAttempts++;
-        await SuccessLogin().ConfigureAwait(true);
-    }
-
-    private async Task ValidateCredencials()
-    {
-        _failedPassword = false;
-        _failedUsername = false;
-        _loginStatus = LoginStatus.LoginIn;
-        await FailedLogin().ConfigureAwait(true);
-    }
-
+    private void DealWithUnexpectedException() =>
+        _logger.LogCritical($"{errorBoundary}", "Unhandled error on MainLayout");
+ 
     private async Task OpenRegisterModal()
     {
         await Modal.CloseAsync();

@@ -4,9 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Bipow.Domain.Aggregates
+namespace Bipow.Domain.Aggregates;
+
+internal class WheelAggregate
 {
-    internal class WheelAggregate
-    {
-    }
 }

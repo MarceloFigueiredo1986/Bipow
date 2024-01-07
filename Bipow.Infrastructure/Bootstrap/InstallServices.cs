@@ -3,6 +3,7 @@ using Bipow.Core.Repositories;
 using Bipow.Core.UnitsOfWork;
 using Bipow.Infrastructure.Database;
 using Bipow.Infrastructure.Repositories;
+using Bipow.Infrastructure.Session;
 using Bipow.Infrastructure.UnitsOfWork;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -16,6 +17,7 @@ public static class InstallServices
         services.AddDbContextFactory<DatabaseContext>();
         services.AddScoped<IdbContext>(opt => opt.GetRequiredService<DatabaseContext>());
         services.AddTransient<IMenusRepository, MenusRepository>();
+        services.AddScoped<ISessionCache, SessionCache>();
 
         return services;
     }

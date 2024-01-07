@@ -2,7 +2,6 @@
 
 public partial class BikesArea
 {
-    IEnumerable<>
 
     protected override Task OnInitializedAsync()
     {

@@ -1,26 +1,48 @@
 ﻿@using Bipow.UI.Models;
 @inherits LayoutComponentBase
+@attribute [StreamRendering(true)]
+
+@inject ILogger<MainLayout> _logger;
 
 <PageTitle>Bipow</PageTitle>
 
-<div>
-    <div class="mainNav">
-        <div class="navtopbar">
-            <iconify-icon icon="oi:@choosedIcon" class="menuIcon" @onclick="() => _dropDownOpen = !_dropDownOpen" />
-            <img src="https://ik.imagekit.io/da113ycvp/Bipow/Logo/Bipow.png" />
-            <span class="userArea"><Bipow.Components.UserSession.UserArea /></span>
-            <input class="searchArea" type="search" placeholder="ex: Casaco Verão" />
+<ErrorBoundary>
+<ChildContent>
+        <div>
+            <div class="mainNav">
+                <div class="navtopbar">
+                    <iconify-icon icon="oi:@choosedIcon" class="menuIcon" @onclick="() => _dropDownOpen = !_dropDownOpen" />
+                    <img src="https://ik.imagekit.io/da113ycvp/Bipow/Logo/Bipow.png" />
+                    <span class="userArea"><Bipow.Components.UserSession.UserArea /></span>
+                    <input class="searchArea" type="search" placeholder="ex: Casaco Verão" />
+                </div>
+            </div>
+            <Bipow.Components.NavMenus.NavDropMenusCollapsable @bind-NotCollapsed="_dropDownOpen" />
+            <main style="margin-top:115px;padding:0px 10px 10px 10px">
+                <BreadcrumbNavigation style="font-family:'Comic Sans MS';" />
+                @Body
+            </main>
         </div>
-    </div>
-    <Bipow.Components.NavMenus.NavDropMenusCollapsable @bind-NotCollapsed="_dropDownOpen" />
-    <main style="margin-top:115px;padding:0px 10px 10px 10px">
-        <BreadcrumbNavigation style="font-family:'Comic Sans MS';" />
-        @Body
-    </main>
-</div>
+</ChildContent>
+<ErrorContent>
+        @{DealWithUnexpectedException();}
+        Fucking hell!!;
+</ErrorContent>
+</ErrorBoundary>
 
 @code{
     protected bool _dropDownOpen = false;
 
+    private ErrorBoundary? errorBoundary;
+
     protected string choosedIcon => !_dropDownOpen ? "menu" : "arrow-bottom";
+
+    private void DealWithUnexpectedException() =>
+        _logger.LogCritical($"{errorBoundary}", "Unhandled error on MainLayout");
+
+    protected override Task OnInitializedAsync()
+    {
+        _logger.LogInformation("MainLayout loaded");
+        return Task.CompletedTask;
+    }
 }
